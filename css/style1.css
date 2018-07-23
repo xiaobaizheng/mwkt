@@ -1,0 +1,106 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+.layer-box {
+  display: none; }
+
+.layer-shadwon {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.3); }
+
+.cur1 {
+  cursor: pointer; }
+
+.fl {
+  float: left; }
+
+.fr {
+  float: right; }
+
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both; }
+
+.btn {
+  display: block;
+  height: 30px;
+  line-height: 30px;
+  min-width: 60px;
+  cursor: pointer; }
+
+.cnt-btn {
+  text-align: center; }
+  .cnt-btn .btn {
+    display: inline-block; }
+
+.p1-section {
+  padding-left: 40px;
+  padding-top: 40px; }
+
+.p1-sdiv {
+  margin-top: 20px;
+  width: 100px;
+  height: 100px;
+  border: 2px solid #101010;
+  background-color: #F7ECB5; }
+
+.pl-layer-box {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  padding: 20px;
+  background-color: #fff;
+  z-index: 1; }
+  .pl-layer-box:before {
+    content: "";
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    right: -10px;
+    bottom: -10px;
+    background-color: rgba(255, 255, 255, 0.5);
+    z-index: -1; }
+
+.p1-layer-btn {
+  margin-bottom: 20px; }
+  .p1-layer-btn dt {
+    width: 130px;
+    text-align: right; }
+  .p1-layer-btn dl {
+    line-height: 30px; }
+  .p1-layer-btn dd.fl {
+    width: 50px;
+    margin-right: 10px;
+    color: #888;
+    text-align: center;
+    border: 1px solid #928787;
+    background-color: #e8e8e8;
+    cursor: pointer;
+    overflow: hidden; }
+    .p1-layer-btn dd.fl:hover {
+      border-color: #101010; }
+
+.p1-layer1 dd.fl {
+  color: #fff; }
+  .p1-layer1 dd.fl.list1 {
+    background-color: yellowgreen; }
+    .p1-layer1 dd.fl.list1:hover {
+      background-color: red; }
+  .p1-layer1 dd.fl.list2 {
+    background-color: darkorange; }
+    .p1-layer1 dd.fl.list2:hover {
+      background-color: yellow;
+      color: #000000; }
+  .p1-layer1 dd.fl.list3 {
+    background-color: cornflowerblue; }
+    .p1-layer1 dd.fl.list3:hover {
+      background-color: dodgerblue; }
+
+/*# sourceMappingURL=style1.css.map */

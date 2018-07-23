@@ -3,7 +3,52 @@
 	<head>
 		<meta charset="UTF-8">
 		<title>热身运动1</title>
+		<link rel="stylesheet" type="text/css" href="css/style1.css"/>
 	</head>
 	<body>
+		<section class="p1-section">
+			<strong>请为下面的div设置样式：</strong>
+			<input class="cur1" type="button" name="" id="clickset" value="点击设置" />
+			<div class="p1-sdiv"></div>
+		</section>
+		
+		<!--弹出层-->
+		<div class="layer-box" id="pl-layer">
+			<p class="layer-shadwon"></p>
+			<div class="layer-con">
+				<div class="pl-layer-box">
+					<div class="p1-layer-btn p1-layer1">
+						<dl class="clearfix" id="type1">
+							<dt class="fl">请选择背景色：</dt>
+							<dd class="fl list1">红</dd>
+							<dd class="fl list2">黄</dd>
+							<dd class="fl list3">蓝</dd>
+						</dl>
+					</div>
+					<div class="p1-layer-btn">
+						<dl class="clearfix" id="type2">
+							<dt class="fl">请选择宽(PX)：</dt>
+							<dd class="fl list1">200</dd>
+							<dd class="fl list2">300</dd>
+							<dd class="fl list3">400</dd>
+						</dl>
+					</div>
+					<div class="p1-layer-btn">
+						<dl class="clearfix" id="type3">
+							<dt class="fl">请选择高(PX)：</dt>
+							<dd class="fl list1">200</dd>
+							<dd class="fl list2">300</dd>
+							<dd class="fl list3">400</dd>
+						</dl>
+					</div>
+					<div class="cnt-btn">
+						<input class="btn" type="button" name="" id="clear" value="恢复" />
+						<input class="btn" type="button" name="" id="sure" value="确定" />
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<script src="js/practice1.js"></script>
 	</body>
 </html>
