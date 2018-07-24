@@ -81,3 +81,53 @@
 	}
 }
 
+//练习1
+.img-switch{
+	width: 50%;
+	margin-top:30px;
+	padding-top: 20px;
+	box-shadow: 0 0 5px 0 rgba(0,0,0,.5);
+	text-align: center;
+}
+.p2-img-box{
+	position: relative;
+	height: 500px;
+	overflow: hidden;
+	p{
+		position: absolute;
+		width: 100%;
+		line-height: 30px;
+		background-color: rgba(0,0,0,.5);
+		color: #fff;
+	}
+	.top{
+		top: 0;
+	}
+	.bottom{
+		bottom: 0;
+	}
+	img{
+		width: auto;
+		height: auto;
+	}
+	.prv,.next{
+		width: 50px;
+		height: 50px;
+		line-height: 50px;
+		font-size: 30px;
+		top: 50%;
+		margin-top: -25px;
+		background-color: rgba(134,122,122,.5);
+		cursor: pointer;
+		user-select: none;
+		&:hover{
+			background-color: rgba(134,122,122,.2);
+		}
+	}
+	.prv{
+		left: 0;
+	}
+	.next{
+		right: 0;
+	}
+}

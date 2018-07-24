@@ -4,6 +4,33 @@
 	padding: 0;
 	box-sizing: border-box;
 }
+@for $i from 1 through 100{
+	.ml#{$i}{
+		margin-left: $i+px;
+	}
+	.mr#{$i}{
+		margin-right: $i+px;
+	}
+	.mt#{$i}{
+		margin-top: $i+px;
+	}
+	.mb#{$i}{
+		margin-bottom: $i+px;
+	}
+	.pl#{$i}{
+		padding-left: $i+px;
+	}
+	.pr#{$i}{
+		padding-right: $i+px;
+	}
+	.pt#{$i}{
+		padding-top: $i+px;
+	}
+	.pb#{$i}{
+		padding-bottom: $i+px;
+	}
+}
+
 .layer-box{
 	display: none;
 }
@@ -44,4 +71,7 @@
 	.btn{
 		display: inline-block;
 	}
+}
+.m-auto{
+	margin: 0 auto;	
 }
