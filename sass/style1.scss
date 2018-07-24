@@ -131,3 +131,81 @@
 		right: 0;
 	}
 }
+//模拟短信发送
+.send-info{
+	position: relative;
+	width: 300px;
+	height: 600px;
+	padding: 76px 24px;
+	margin-top: 20px;
+	background: url(../img/imgSwitch/phone.png) no-repeat center center;
+	background-size: contain;
+}
+.send-info-b{
+	position: absolute;
+	margin: 0 24px;
+	bottom: 81px;
+	left: 0;
+	right: 0;
+	padding-top: 5px;
+	border-top: 1px solid rgba(0, 0, 0, 0.3);
+	.input-txt{
+		width: 155px;
+	}
+}
+.se-head{
+	width: 30px;
+	height: 30px;
+	vertical-align: middle;
+	border-radius: 50%;
+	cursor: pointer;
+	overflow: hidden;
+}
+.send-info-con{
+	position: absolute;
+	left: 0;
+	right: 0;
+	margin: 0 30px;
+	max-height: 400px;
+    overflow-y: auto;
+	.flexty1{
+		justify-content: flex-start;
+	}
+	img{
+		flex-shrink: 0;
+	}
+	.ml10{
+		position: relative;
+		border-radius: 4px;
+		font-size: 12px;
+		padding: 5px;
+		background-color: #e8e8e8;
+		word-break:break-all;
+		&:before{
+			content: "";
+			position: absolute;
+			left: -5px;
+			border-top: 5px solid transparent;
+			border-bottom: 5px solid transparent;
+			border-right: 5px solid #e8e8e8;
+		}
+	}
+	.mysend{
+		flex-direction: row-reverse;
+		&.flexty1{
+			justify-content: flex-start;
+		}
+		.ml10{
+			margin-left: 0;
+			margin-right: 10px;
+			background-color: yellowgreen;
+			color: #fff;
+			&:before{
+				left: auto;
+				right: -5px;
+				transform: rotateY(180deg);
+				border-right-color: yellowgreen;
+			}
+		}
+	}
+}
