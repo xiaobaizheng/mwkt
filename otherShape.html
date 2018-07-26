@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>形状</title>
+		<link rel="stylesheet" type="text/css" href="css/style1.css"/>
+	</head>
+	<body>
+		<div id="div1"></div>
+		<div id="div2"></div>
+		
+		<script>
+			let aDiv1 = document.getElementById("div1"),
+			    aDiv2 = document.getElementById("div2"),
+				aList1 = aDiv1.getElementsByTagName("div"),
+				aList2 = aDiv2.getElementsByTagName("div"),
+				aDivLen = 0,
+				len1 = 0,
+				count = 30,
+				html = "",
+				html1 = "";
+			for (let i = 0; i < count; i++) {
+				html += `<div class="shape3">${i}</div>`;
+			}
+			aDiv1.innerHTML = html;
+			aDivLen = aList1.length;
+			for (var i = 0; i < aDivLen; i++) {
+				aList1[i].style.left = 10 + i % 10 * 60 + "px";
+				aList1[i].style.top = 10 + Math.floor(i / 10) * 60 +"px"
+			}
+			//div2
+			for (let i = 0; i < 11; i++) {
+				html1 += `<div class="shape3">${i}</div>`;
+			}
+			aDiv2.innerHTML = html1;
+			len1 = aList2.length;
+			for (var i = 0; i < len1; i++) {
+				aList2[i].style.left = 10 + i * 50 + "px";
+				aList2[i].style.top = 190 + i * 50 +"px"
+				if (i >= len1 / 2) {
+					aList2[i].style.top = 190 + (10 - i)* 50 +"px"
+				}
+			}
+		</script>
+	</body>
+</html>

@@ -2629,4 +2629,87 @@
         transform: rotateY(180deg);
         border-right-color: yellowgreen; }
 
+.shape3 {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  left: 0;
+  top: 0;
+  line-height: 50px;
+  font-size: 18px;
+  text-align: center;
+  background-color: #1E90FF;
+  color: #fff; }
+
+.img-s1 {
+  position: relative;
+  width: 500px;
+  height: 400px;
+  margin-top: 50px;
+  background-color: rgba(0, 0, 0, 0.5);
+  overflow: hidden; }
+  .img-s1 .left, .img-s1 .right {
+    position: absolute;
+    top: 50%;
+    margin-top: -20px;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    color: #fff;
+    text-align: center;
+    font-size: 40px;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 50%;
+    user-select: none;
+    cursor: pointer; }
+    .img-s1 .left:hover, .img-s1 .right:hover {
+      background-color: orange; }
+  .img-s1 .left {
+    left: 0; }
+  .img-s1 .right {
+    right: 0; }
+  .img-s1 img {
+    width: 100%;
+    height: auto; }
+  .img-s1 ul {
+    position: absolute;
+    bottom: 10px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    text-align: center; }
+    .img-s1 ul li {
+      position: relative;
+      list-style: none;
+      display: inline-block;
+      width: 12px;
+      height: 12px;
+      margin: 0 5px;
+      border-radius: 50%;
+      background-color: rgba(16, 16, 16, 0.73);
+      cursor: pointer; }
+      .img-s1 ul li.active {
+        background-color: orange; }
+      .img-s1 ul li div {
+        display: none;
+        position: absolute;
+        bottom: 25px;
+        left: 50%;
+        margin-left: -80px;
+        width: 150px;
+        height: 90px;
+        background: #fff;
+        padding: 5px; }
+        .img-s1 ul li div img {
+          height: 80px; }
+        .img-s1 ul li div:after {
+          content: "";
+          position: absolute;
+          bottom: -6px;
+          left: 50%;
+          margin-left: -3px;
+          border-left: 6px solid transparent;
+          border-right: 6px solid transparent;
+          border-top: 6px solid #fff; }
+
 /*# sourceMappingURL=style1.css.map */
