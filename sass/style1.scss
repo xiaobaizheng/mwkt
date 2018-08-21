@@ -305,3 +305,185 @@
 		}
 	}
 }
+//组图切换
+.img-s2{
+	margin: 20px auto;
+	padding: 40px;
+	background-color: #fff;
+	box-shadow: 0 0 5px 0 rgba(0,0,0,.5);
+	width: 980px;
+	&>div{
+		padding: 20px;
+		background-color: #fff;
+		box-shadow: 0 0 5px 0 rgba(0,0,0,.3);
+	}
+	.box-l{
+		width: 350px;
+		img{
+			width: 310px;
+		}
+	}
+	.box-r{
+		width: 550px;
+		img{
+			width: 510px;
+		}
+	}
+	img{
+		height: 360px;
+	}
+}
+
+//搜狗视频记录片列表展示
+.sg-box{
+	width: 300px;
+	min-height: 400px;
+	margin-top: 30px;
+	background-color: rgb(222, 231, 231);
+	box-shadow: 0 0 10px 0 rgba(0, 0, 0, .5);
+	.head,.list{
+		margin: 0 15px;
+	}
+	.head{
+		position: relative;
+		padding-top: 10px;
+		padding-bottom: 10px;
+		border-bottom: 1px solid #204D74;
+		h3{
+			color: rgb(24, 90, 132);
+			font-family: "宋体";
+		}
+		.clearfix{
+			position: absolute;
+			margin-top: 12px;
+			right: 0;
+		}
+		p{
+			padding: 2px 10px;
+			border: 1px solid #204D74;
+			border-right: 0;
+			font-size: 12px;
+			background-color: rgb(222, 231, 231);
+			cursor: pointer;
+			&.last{
+				border-right: 1px solid #204D74;
+			}
+			&.active{
+				background-color: #fff;
+				border-bottom: 0;
+			}
+		}
+	}
+	.list{
+		position: relative;
+		padding: 10px 0;
+		border-bottom: 1px dashed #fff;
+		span{
+			position: absolute;
+			left: 0;
+			width: 20px;
+			line-height: 15px;
+			text-align: center;
+			background-color: rgb(24, 90, 132);
+			color: #fff;
+		}
+		.ml25{
+			margin-left: 25px;
+		}
+		.content{
+			position: relative;
+			img{
+				position: absolute;				
+				left: 0;
+				width: 100px;
+				height: 70px;
+			}
+			.dsp{
+				margin-left: 110px;
+				display: -webkit-box;
+				-webkit-box-orient: vertical;
+				-webkit-line-clamp: 2;
+				overflow: hidden;
+			}
+			.text-r{
+				position: relative;
+				&:before{
+					content: "";
+					position: absolute;
+					right: 37px;
+					top: 7px;
+					border-top: 4px solid transparent;
+					border-bottom: 4px solid transparent;
+					border-left: 4px solid #fff;
+				}
+			}
+			.btn{
+				min-width: 45px;
+				background-color: rgb(41,115,156);
+				color: #fff;
+				height: 22px;
+				line-height: 22px;
+				font-size: 12px;
+				letter-spacing: 2px;
+				text-indent: 10px;
+				border: none;
+			}
+		}
+	}
+}
+//修改文本框的值
+.up-list-box{
+	width: 400px;
+	margin-top: 30px;
+	background-color: #fff;
+	box-shadow: 0 0 10px 0 rgba(0, 0, 0, .5);
+	h4{
+		padding: 10px;
+		background-color: rgb(107,165,66);
+		color: #fff;
+		font-family: "宋体";
+	}
+	li{
+		list-style: none;
+		padding: 5px 10px;
+		border-bottom: 1px solid #ddd;
+		font-size: 12px;
+		.icon{
+			display: inline-block;
+			width: 16px;
+			height: 16px;
+			margin-left: 10px;
+			background: url(../img/icon/edit0.png) no-repeat center center;
+			vertical-align: middle;
+			cursor: pointer;
+			&.hidden{
+				display: none;
+			}
+		}
+	}
+}
+
+.scorll-table{
+	position: relative;
+	margin-top: 100px;
+	width: 100%;
+	overflow: hidden;
+	overflow-x: auto;
+	.psd{
+		position: absolute;
+		left: 0;
+	}
+}
+.table{
+	table-layout: fixed;
+	border-collapse: separate;
+	width: 100%;
+	text-align: center;
+	th,td{
+		padding: 12px 0;
+		border-right: 1px solid #ddd;
+		border-bottom: 1px solid #ddd;
+	}
+	tr{
+	}
+}

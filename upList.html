@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>修改文本框的值</title>
+		<link rel="stylesheet" type="text/css" href="css/style1.css"/>
+	</head>
+	<body>
+		<section class="m-auto up-list-box">
+			<h4>分类名称</h4>
+			<ul>
+				<li>
+					<span>随便的描述一下~</span>
+					<input class="input-txt hidden" type="text" name="" id="" value="随便的描述一下~" readonly/>
+					<i class="icon"></i>
+				</li>
+				<li>
+					<span>随便的描述两下~</span>
+					<input class="input-txt hidden" type="text" name="" id="" value="随便的描述两下~" readonly/>
+					<i class="icon"></i>
+				</li>
+				<li>
+					<span>随便的描述三下咯~</span>
+					<input class="input-txt hidden" type="text" name="" id="" value="随便的描述三下咯~" readonly/>
+					<i class="icon"></i>
+				</li>
+			</ul>
+		</section>
+		
+		<div class="scorll-table">
+			<div class="psd">
+				<table class="table" style="width: 1300px;">
+					<tr>
+						<th width="200">Header</th>
+						<th width="200">Header</th>
+						<th width="300">Header</th>
+						<th width="200">Header</th>
+						<th width="200">Header</th>
+						<th width="200">Header</th>
+					</tr>
+					<tr>
+						<td>Data</td>
+						<td>Data</td>
+						<td>Data</td>
+						<td>Data</td>
+						<td>Data</td>
+						<td>Data</td>
+					</tr>
+				</table>
+			</div>
+		</div>
+		
+		
+		
+		
+		<script>
+			let oUl = document.getElementsByTagName("ul")[0],
+				aLi = oUl.getElementsByTagName("li");
+			for (var i = 0; i < aLi.length; i++) {
+				editTxt(aLi[i]);
+			}
+			//点击编辑
+			function editTxt (oLi) {
+				var oInput = oLi.getElementsByTagName("input")[0],
+					oSpan = oLi.getElementsByTagName("span")[0],
+					oIcon = oLi.getElementsByClassName("icon")[0],
+					html = `<span class="ml10 green-c">保存</span><span class="ml10 green-c">取消</span>`,
+					iptTxt = oInput.value;
+					
+				oIcon.onclick = function () {
+					oSpan.classList.add("hidden");
+					oIcon.classList.add("hidden");
+					oInput.classList.remove("hidden");
+					oInput.readOnly = false;
+					oLi.innerHTML += html;
+					let aBtn = oLi.getElementsByClassName("green-c");
+					oInput.value='aaa';
+					aBtn[0].onclick = function () {
+//						oInput = oLi.getElementsByTagName("input")[0];
+oInput.value='aaa';
+						if (oInput.value.trim() == "" ) {
+							alert("不能为空，请输入值");
+						}
+						console.log(oSpan.classList)
+						oSpan.classList.remove("hidden");
+						oIcon.classList.remove("hidden");
+						oInput.classList.add("hidden");
+						oInput.readOnly = true;
+						
+					}
+				}
+			}
+			
+		</script>
+	</body>
+</html>

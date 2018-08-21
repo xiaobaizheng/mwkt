@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>类型判断</title>
+		<link rel="stylesheet" type="text/css" href="css/style1.css"/>
+	</head>
+	<body>
+		<ul>
+			<li>找到所有数字:</li>
+			<li>找到可以转成数字的:</li>
+			<li>把转成数字以后，最大值判断出来:</li>
+			<li>把NAN所在的位置找出来:</li>
+		</ul>
+		请输入QQ号码：<input class="input-txt" type="text" />
+		<input class="btn inline-block" type="button" value="判断" />
+		
+		
+		<script>
+			let arr = ['100px', 'abc'-6, [], -98765, 34, -2, 0, '300', , function(){alert(1);}, null, document, [], true, '200px'-30,'23.45元', 5, Number('abc'), function(){ alert(3); }, 'xyz'-90],
+			arrInt = [],
+			arrIntStr = [],
+			arrIndex = [];
+			let oUl = document.getElementsByTagName("ul")[0],
+				aLi = oUl.getElementsByTagName("li");
+		for (let i = 0; i < arr.length; i++) {
+			//找到所有数字
+			if (!isNaN(arr[i]) && typeof arr[i] === "number") {
+				arrInt.push(arr[i]);
+			}
+			//找到可以转成数字的
+			if (!isNaN(parseInt(arr[i]))){
+				arrIntStr.push(arr[i]);
+			}
+		}
+		aLi[0].innerText = aLi[0].innerText.replace(":", ":" + arrInt);
+		aLi[1].innerText = aLi[1].innerText.replace(":", ":" + arrIntStr);
+		//把转成数字以后，最大值判断出来
+		let a = 0
+		for (var i = 0; i < arrInt.length; i++) {
+			if (i > 0 && arrInt[i] - a > 0) {
+				a = arrInt[i];
+			}
+		}
+		aLi[2].innerText = aLi[2].innerText.replace(":", ":" + a);
+//		console.log(Math.max.apply(null, arrInt));
+//		console.log(arrIntStr);
+//		let bb = ".123"
+//		alert(Number(bb)); 
+//		alert(isNaN(bb)); 
+		//把NAN所在的位置找出来
+		for (var i = 0; i < arr.length; i++) {
+			if (arr[i] !== arr[i]) {
+				arrIndex.push(i);
+			}
+		}
+		aLi[3].innerText = aLi[3].innerText.replace(":", ":" + arrIndex);
+//		console.log(arrIndex);
+//		alert(dd);
+//		var dd = 1;
+//		alert(dd);
+//		function dd () {
+//			alert(2);
+//		}
+//		alert(dd);
+//		var dd = 3;
+//		alert(dd);
+//		var dd = function () {
+//			alert(4);
+//		}
+//		alert(dd);
+
+		let aInput = document.getElementsByTagName("input"),
+			oBtn = aInput[1];
+			oBtn.onclick = function () {
+				if (aInput[0].value.trim() == "") {
+					alert("不能为空，请输入。");
+				} else if (isNaN(aInput[0].value)) {
+					alert("只能输入数字。");
+				} else if (Number(aInput[0].value.charAt(0)) === 0) {
+					alert("不能有0在前面。");
+				} else if (aInput[0].value.indexOf(".") !== -1) {
+					alert("不能为小数。");
+				} else if (aInput[0].value.length <= 5 || aInput[0].value.length > 10 ) {
+					alert("输入的数字必须在5位以上、10位以内。");
+				} else {
+					alert("您输入的QQ号码为：" + aInput[0].value);
+				}
+			}
+		</script>
+	</body>
+</html>
